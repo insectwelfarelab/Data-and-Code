@@ -1,3 +1,5 @@
+This pipeline is the reference document for the work described here: https://forum.effectivealtruism.org/posts/2JdY8vuMAYcbqX5p9/research-report-a-genetic-basis-for-potential-nociception-in?sharePopup=true
+
 # Kerria lacca nociception-related ion channel pipeline
 
 This repository documents the workflow used to identify nociception-related ion channel gene families in the *Kerria lacca* genome assembly **GCA_045014175.1**.
