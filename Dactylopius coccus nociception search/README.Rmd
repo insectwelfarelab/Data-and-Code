@@ -1,0 +1,70 @@
+# Dactylopius coccus nociception-associated genes
+
+Genome-level discovery and classification of nociception-associated ion-channel and auxiliary-subunit targets in the cochineal insect *Dactylopius coccus*.
+
+## Scope
+
+Ten target groups were surveyed: Painless, NompC, TRPM, Piezo, Pkd2, ppk/rpk/ppk26-related DEG/ENaC loci, TRPA1, TRPA5, Pyrexia, and Straightjacket. Straightjacket is treated as an alpha2delta auxiliary-subunit target rather than a pore-forming ion channel.
+
+## Genome assembly
+
+- Species: *Dactylopius coccus*
+- Assembly: GCA_977009245.1
+- Assembly name: ihDacCocc15.1
+- Assembly level: chromosome
+- Genome size: ~360.3 Mb
+- Chromosome-scale sequences: 8
+- BUSCO (`hemiptera_odb12.2`): 94.2% complete
+
+Because no suitable public gene annotation/proteome was available for the target analysis, loci were identified directly from genomic sequence using validated protein references, TBLASTN, Miniprot protein-to-genome reconstruction, and phylogenetic validation for difficult target groups.
+
+## Final target summary
+
+| Target | Final *D. coccus* classification |
+|---|---|
+| Painless | 1 apparently intact locus |
+| NompC | 1 apparently intact locus |
+| TRPM | 1 apparently intact locus |
+| Piezo | 2 apparently intact loci |
+| Pkd2 | Not detected after sensitive genome-level search |
+| ppk/rpk/ppk26-related | 2 apparently intact target-related loci |
+| TRPA1 | 1 apparently intact locus |
+| TRPA5 | 1 disrupted orthologous locus; intact CDS not confirmed |
+| Pyrexia | 3 apparently intact Pyrexia-lineage loci |
+| Straightjacket | 1 apparently intact Straightjacket-like locus |
+
+An additional apparently intact stolid-like alpha2delta paralog was identified but is not counted as Straightjacket.
+
+## Limitations
+
+- “Apparently intact” is an assembly/model-level classification and does not establish expression or physiological function.
+- Pkd2 is reported as **not detected**, not definitively absent.
+- The TRPA5 orthologous locus contains predicted coding-sequence disruptions in the current assembly; stronger pseudogene inference requires independent sequence-level validation.
+- Pyx-A and Pyx-B are separate loci in the current assembly and are consistent with a recent duplication, but read-level or independent-assembly validation would be needed to completely exclude residual assembly/haplotype redundancy.
+- The *Kerria lacca* comparison used in summary figures is descriptive context only; no lineage-specific Pyrexia expansion/contraction claim is made.
+
+## Repository structure
+
+```text
+.
+├── README.md
+├── CITATION.cff
+├── .gitignore
+├── docs/
+│   └── GITHUB_RELEASE_CHECKLIST.md
+├── environment/
+│   └── software_versions.tsv
+├── figures/
+├── results/
+│   └── final_summary/
+└── scripts/
+    └── prepare_github_release.sh
+```
+
+The staging script copies the curated final tables, figures, tree files, analysis scripts, QC script, and final RMarkdown documents from the completed WSL project into a GitHub-ready directory.
+
+## Reproducibility
+
+The public repository should contain curated reproducible outputs rather than a byte-for-byte copy of the working directory. Large downloaded genomes, BLAST databases, BUSCO/eggNOG databases, Conda environments, and bulky transient files should remain outside GitHub.
+
+
